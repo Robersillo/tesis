@@ -1,0 +1,40 @@
+                            <?php
+while ($row=mysqli_fetch_array($result))
+{
+echo '<tr><td>'.$row["empresa"].'</td>';
+    if($row["asistentes"] >= 15   ){
+        echo '<td class="verde">'.$row["asistentes"].' </td>';
+    }
+    else if ($row["asistentes"] < 15   ){
+    echo '<td class="rojo">'.$row["asistentes"].'</td>';
+}
+    echo '<td>'.$row["reservaciones"].'</td>';
+echo '<td>'.$row["rif"].'</td>';
+echo '<td>'.$row["mail"].'</td>';
+echo '<td>'.$row["cel"].'</td>';
+    echo '<td>'.$row["local"].'</td>';
+}
+mysqli_free_result($result);
+?>
+
+
+
+
+                            <?php
+while ($row=mysqli_fetch_array($result))
+{
+echo '<tr><td>'.$row["empresa"].'</td>';
+    if($row["asistentes"] >= 15   ){
+        echo '<td><span class="label label-sm label-success">'.$row["asistentes"].'</span> </td>';
+    }
+    else if ($row["asistentes"] < 15   ){
+    echo '<td><span class="label label-sm label-danger">'.$row["asistentes"].'</span> </td>';
+}
+    echo '<td>'.$row["reservaciones"].'</td>';
+echo '<td>'.$row["rif"].'</td>';
+echo '<td>'.$row["mail"].'</td>';
+echo '<td>'.$row["cel"].'</td>';
+    echo '<td>'.$row["local"].'</td>';
+}
+mysqli_free_result($result);
+?>
